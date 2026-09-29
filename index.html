@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CodeLap Hackathon 2026</title>
+  <link rel="alternate" hreflang="ro" href="ro/" />
+  <link rel="alternate" hreflang="en" href="eng/" />
+  <script>
+    // Romanian browsers go to /ro, everyone else to /eng.
+    var langs = navigator.languages || [navigator.language || ""];
+    var ro = langs.some(function (l) { return /^ro\b/i.test(l); });
+    location.replace(ro ? "ro/" : "eng/");
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url=ro/" /></noscript>
+  <style>body{margin:0;min-height:100vh;display:grid;place-content:center;gap:12px;background:#EAF3FB;color:#0B306B;font:14px/1.5 ui-monospace,monospace;text-align:center}a{color:#1E64D8}</style>
+</head>
+<body>
+  <p>CodeLap Hackathon 2026</p>
+  <p><a href="ro/">Română</a> · <a href="eng/">English</a></p>
+</body>
+</html>

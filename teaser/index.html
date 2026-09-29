@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Something is coming.</title>
+  <meta name="description" content="Something is coming. Porsche Engineering Romania × GDGoC UTCN." />
+  <meta name="theme-color" content="#EAF3FB" />
+  <meta property="og:title" content="Something is coming." />
+  <meta property="og:image" content="../assets/car.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B306B'/%3E%3Cpath d='M9 10l-5 6 5 6M23 10l5 6-5 6' stroke='%233A8BD9' stroke-width='3' fill='none'/%3E%3Crect x='12' y='14' width='8' height='4' fill='%23fff'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="../assets/car-taycan.jpg" />
+  <link rel="stylesheet" href="../styles.css?v=4" />
+  <link rel="stylesheet" href="teaser.css?v=4" />
+</head>
+<body class="tz-body">
+  <canvas id="glitch-bg" aria-hidden="true"></canvas>
+  <div class="viewport-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="tz-flash" id="flash" aria-hidden="true"></div>
+
+  <main class="tz">
+    <header class="tz__top">
+      <span class="label">// Incoming transmission</span>
+      <span class="label tz__rec"><i aria-hidden="true"></i>Rec · 2026</span>
+    </header>
+
+    <div class="tz__stage">
+      <span class="cross" style="top:6%;left:4%" aria-hidden="true"></span>
+      <span class="cross" style="top:14%;right:6%" aria-hidden="true"></span>
+      <span class="cross" style="bottom:10%;right:12%" aria-hidden="true"></span>
+
+      <div class="tz__frame" id="frame">
+        <div class="tz__car" role="img" id="car" aria-label="A covered car, waiting to be revealed">
+          <div class="tz__cover" id="cover"></div>
+          <div class="tz__new" id="new"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tz__bottom">
+      <!-- before the reveal -->
+      <section class="tz__pre" id="pre" aria-live="polite">
+        <h1 class="tz__h glitch" data-text="SOMETHING IS COMING.">Something is <em>coming.</em></h1>
+
+        <div class="tz__cd" id="cd" aria-label="Time until the reveal">
+          <div><span data-u="d">--</span><small>Days</small></div>
+          <b aria-hidden="true">:</b>
+          <div><span data-u="h">--</span><small>Hours</small></div>
+          <b aria-hidden="true">:</b>
+          <div><span data-u="m">--</span><small>Min</small></div>
+          <b aria-hidden="true">:</b>
+          <div><span data-u="s">--</span><small>Sec</small></div>
+        </div>
+
+        <div class="tz__load">
+          <div class="bar" aria-hidden="true"><span id="bar"></span></div>
+          <span class="label label--muted" id="load">Loading</span>
+        </div>
+      </section>
+
+      <!-- after the reveal -->
+      <section class="tz__post" id="post" hidden>
+        <p class="label label--lg" style="--i:0">// Reveal complete</p>
+        <h2 class="title" style="--i:1"><span class="glitch" data-text="CodeLap">Code<em>Lap</em></span></h2>
+        <p class="spaced" style="--i:2">H a c k a t h o n</p>
+        <p class="motto" style="--i:3">Drive the future<span class="blink">_</span></p>
+        <p class="tz__meta" style="--i:4">20 – 22 Nov 2026 <span>/</span> Cluj-Napoca <span>/</span> AI &amp; DevOps</p>
+        <div class="tz__btns" style="--i:5">
+          <a class="btn" href="../ro/">Intră în cursă <span aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="../eng/">English</a>
+        </div>
+        <p class="label label--muted" style="--i:6">Porsche Engineering Romania × GDGoC UTCN</p>
+      </section>
+    </div>
+  </main>
+
+  <script src="teaser.js?v=4" defer></script>
+</body>
+</html>
