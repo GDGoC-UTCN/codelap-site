@@ -54,6 +54,11 @@
   mask-image: radial-gradient(ellipse 72% 70% at 50% 52%, #000 58%, transparent 100%);
 }
 
+/* poster-style pixel bars: only once the reveal starts, faster while it runs */
+.tz__frame .car-fx { visibility: hidden; }
+.is-revealing .tz__frame .car-fx { visibility: visible; }
+.is-revealing:not(.is-revealed) .tz__frame .car-fx span { animation-duration: calc(var(--t, 5s) * .35); }
+
 /* the uncovered car, sliced into strips by teaser.js (hidden until the reveal) */
 .tz__new { position: absolute; inset: 0; pointer-events: none; }
 .tz__nstrip {
@@ -68,24 +73,13 @@
   position: absolute;
   left: 0;
   width: 100%;
-  background: var(--bg); /* the photo's white multiplies into the page colour */
 }
 .tz__nstrip img {
   position: absolute;
-  left: 50%;
-  top: 5.7%;      /* wheels land on the covered car's floor line (73% down) */
-  width: 90%;     /* same body width as the covered car */
+  left: 0;
+  top: 0;         /* car-glitch.webp is framed like car.jpg: wheels on the floor line (73% down) */
+  width: 100%;
   max-width: none;
-  transform: translateX(-50%);
-  mix-blend-mode: multiply;
-}
-/* floor reflection, mirrored around the wheel line */
-.tz__nstrip img.tz__refl {
-  top: 65.9%;
-  transform: translateX(-50%) scaleY(-1);
-  opacity: .22;
-  -webkit-mask-image: linear-gradient(to top, #000 10%, transparent 34%);
-  mask-image: linear-gradient(to top, #000 10%, transparent 34%);
 }
 
 /* the cover (covered-car image), sliced into strips by teaser.js */

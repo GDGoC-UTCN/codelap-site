@@ -5,6 +5,7 @@
       "firebase.json",
       "README.md",
       "**/.*",
+      ".venv/**",
       "**/node_modules/**"
     ],
     "cleanUrls": true,

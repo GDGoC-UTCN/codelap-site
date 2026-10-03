@@ -122,11 +122,9 @@
     inner.style.top = `${-i * 100}%`;
     inner.style.height = `${STRIPS * 100}%`;
     const img = document.createElement("img");
-    img.src = "../assets/car-taycan.jpg";
+    img.src = "../assets/car-glitch.webp";
     img.alt = "";
-    const refl = img.cloneNode();
-    refl.className = "tz__refl";
-    inner.append(img, refl);
+    inner.append(img);
     n.appendChild(inner);
     newCar.appendChild(n);
     newStrips.push(n);
