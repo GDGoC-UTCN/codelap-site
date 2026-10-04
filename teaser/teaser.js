@@ -1,26 +1,23 @@
 /* CodeLap — teaser countdown; at zero the covered car glitches into the real one.
  *
- * Preview without waiting:
- *   ?demo       → countdown from 10 seconds, then reveal
- *   ?demo=30    → countdown from 30 seconds
- *   ?reveal     → play the reveal immediately
+ * Used by two pages:
+ *   /                     → counts down to REVEAL_AT
+ *   /supersecret/reveal   → <body data-demo="10">: counts down from 10 seconds
  */
 (() => {
   "use strict";
 
-  const REVEAL_AT = new Date("2026-10-05T10:00:00+03:00"); // Cluj-Napoca time
+  const REVEAL_AT = new Date("2026-10-26T20:00:00+02:00"); // 26 Oct, 20:00 Romania time (EET, after the clocks go back)
   const TEASER_START = new Date("2026-09-26T00:00:00+03:00"); // loading bar starts here
 
-  const params = new URLSearchParams(location.search);
+  const demoSecs = parseInt(document.body.dataset.demo, 10) || 0;
   const now0 = Date.now();
   let target = REVEAL_AT.getTime();
   let barStart = TEASER_START.getTime();
-  if (params.has("demo")) {
-    const secs = parseInt(params.get("demo"), 10) || 10;
-    target = now0 + secs * 1000;
+  if (demoSecs) {
+    target = now0 + demoSecs * 1000;
     barStart = now0;
   }
-  if (params.has("reveal")) target = now0;
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const body = document.body;
@@ -122,7 +119,7 @@
     inner.style.top = `${-i * 100}%`;
     inner.style.height = `${STRIPS * 100}%`;
     const img = document.createElement("img");
-    img.src = "../assets/car-glitch.webp";
+    img.src = "/assets/car-glitch.webp";
     img.alt = "";
     inner.append(img);
     n.appendChild(inner);
@@ -163,7 +160,7 @@
     }
     lastSec = s;
 
-    if (left <= 0 && !revealed) reveal(params.has("demo") || params.has("reveal") ? 0 : 600);
+    if (left <= 0 && !revealed) reveal(demoSecs ? 0 : 600);
   }
 
   function shakeFrames(amp) {
