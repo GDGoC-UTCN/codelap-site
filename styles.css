@@ -1112,26 +1112,8 @@ p + p { margin-top: 12px; }
   align-items: start;
 }
 .join .info { grid-template-columns: 1fr; }
-.info__card--status {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-.qr {
-  width: 96px;
-  height: 96px;
-  flex-shrink: 0;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  border: 1.5px dashed var(--accent);
-  background:
-    linear-gradient(90deg, var(--light) 50%, transparent 50%) 0 0 / 12px 12px,
-    linear-gradient(var(--light) 50%, transparent 50%) 0 0 / 12px 12px;
-}
-.qr span { font-family: var(--f-tech); font-weight: 800; font-size: 20px; color: var(--deep); }
-.qr small { font-family: var(--f-mono); font-size: 10px; letter-spacing: .1em; color: var(--muted); }
+.info__card--status [data-reg-live] { margin-top: 14px; }
+.info__card--status [hidden] { display: none; }
 
 .keydates__list {
   list-style: none;
@@ -1191,6 +1173,48 @@ p + p { margin-top: 12px; }
 }
 .rules > div { max-width: 640px; }
 .rules .h2 { margin-bottom: 14px; }
+
+/* prizes note */
+.prizes__note { margin: 18px 0 0; color: var(--muted); }
+
+/* faq */
+.faq { display: grid; gap: 28px; max-width: 860px; }
+.faq__cat {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+.faq__item {
+  background: var(--white);
+  border: 1px solid var(--line);
+  margin-bottom: 8px;
+}
+.faq__item summary {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding: 16px 52px 16px 20px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px; top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--f-mono);
+  font-size: 20px;
+  color: var(--accent);
+}
+.faq__item[open] summary::after { content: "–"; }
+.faq__item p { margin: 0; padding: 0 20px 18px; color: var(--muted); }
+.faq__more { margin: 0; color: var(--muted); }
+.faq__more a { color: var(--accent); text-decoration: underline; }
 
 /* ─────────── footer ─────────── */
 
@@ -1306,8 +1330,6 @@ p + p { margin-top: 12px; }
   .orgs, .prizes, .tracks--two { grid-template-columns: 1fr; }
   .org { flex-direction: column; align-items: flex-start; gap: 14px; }
   .prize { min-height: 0; }
-  .info__card--status { align-items: flex-start; }
-  .qr { width: 76px; height: 76px; }
   .about__stats { gap: 12px; }
   .stat { min-height: 130px; }
   .cd { padding-inline: 8px; }

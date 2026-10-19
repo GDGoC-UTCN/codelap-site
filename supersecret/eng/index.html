@@ -16,7 +16,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<<<<<<< HEAD:supersecret/eng/index.html
   <link rel="stylesheet" href="/styles.css?v=5" />
+=======
+  <link rel="stylesheet" href="../styles.css?v=5" />
+>>>>>>> b1991ce (added regulation and faq):eng/index.html
 </head>
 <body>
   <canvas id="glitch-bg" aria-hidden="true"></canvas>
@@ -36,6 +40,7 @@
         <a href="#location">Location</a>
         <a href="#prizes">Prizes</a>
         <a href="#join">Join</a>
+        <a href="#faq">FAQ</a>
       </nav>
       <div class="lang" aria-label="Language">
         <a href="/supersecret/ro/" lang="ro">RO</a>
@@ -80,7 +85,7 @@
           </ul>
 
           <div class="hero__ctas reveal">
-            <a href="https://claude.ai/artifact/U6guMbbbthUHRPtGp7rjGZ" target="_blank" rel="noopener" class="btn">Rules <span aria-hidden="true">↗</span></a>
+            <a href="../assets/regulament.pdf" target="_blank" rel="noopener" class="btn">Rules<span aria-hidden="true">↗</span></a>
             <a href="#about" class="btn btn--ghost">Learn more</a>
           </div>
         </div>
@@ -193,8 +198,8 @@
           <article class="panel track reveal">
             <span class="track__idx">02</span>
             <h3>Data-Driven Infrastructure Engineering</h3>
-            <p>Focused on database design and processing, data pipelines, data integration and quality, performance optimization, cloud databases, and the development of data-driven applications.</p>
-            <p class="track__tags">data pipelines / integration / cloud databases</p>
+            <p>Focused on using metadata to generate relevant insights and performance indicators, supporting the monitoring, analysis and improvement of a process or use case.</p>
+            <p class="track__tags">metadata / performance indicators / monitoring</p>
           </article>
         </div>
       </div>
@@ -215,9 +220,9 @@
               <span class="lap__n">01</span>
               <span class="lap__node" aria-hidden="true"></span>
               <svg class="lap__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg>
-              <h3>Opening &amp; workshops</h3>
+              <h3>Opening &amp; technical sessions</h3>
               <p class="lap__day">Friday · 20 Nov</p>
-              <p>One workshop per track, running in parallel. The actual challenge is announced and every team gets its questions answered.</p>
+              <p>Check-in between 16:00 and 17:00, then the official opening and the presentation of the challenges. One technical session per track follows. After 22:00, work continues online.</p>
             </li>
             <li class="lap">
               <span class="lap__n">02</span>
@@ -225,21 +230,21 @@
               <svg class="lap__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
               <h3>Build day</h3>
               <p class="lap__day">Saturday · 21 Nov</p>
-              <p>No workshops: a full day dedicated to building your solution, with constant support from the mentors.</p>
+              <p>08:00–22:00: project development and mentoring sessions, with breaks. After 22:00, work continues online.</p>
             </li>
             <li class="lap">
               <span class="lap__n">03</span>
               <span class="lap__node" aria-hidden="true"></span>
               <svg class="lap__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M12 16v4M8 21h8M11 7l-2 4h4l-2 3"/></svg>
-              <h3>Final presentations</h3>
+              <h3>Submission &amp; final presentations</h3>
               <p class="lap__day">Sunday · 22 Nov</p>
-              <p>Each team presents its solution in about 10 minutes, followed by questions from the jury.</p>
+              <p>Projects are submitted by 12:00. From 12:30, each team gets up to 15 minutes: 10 to present and demo, 5 for the jury's questions. The awards ceremony is at 16:30.</p>
             </li>
           </ol>
 
           <div class="btn-row">
             <a class="btn" href="https://docs.google.com/document/d/1RqpgbeSEgyTqQ353kEy7WQGCFNHvMf1YsGv8Kuz95RY/edit?tab=t.0#heading=h.voz0mu7q1jo9" target="_blank" rel="noopener">See the full schedule <span aria-hidden="true">↗</span></a>
-            <a class="btn btn--ghost" href="https://claude.ai/artifact/U6guMbbbthUHRPtGp7rjGZ" target="_blank" rel="noopener">Official rules <span aria-hidden="true">↗</span></a>
+            <a class="btn btn--ghost" href="../assets/regulament.pdf" target="_blank" rel="noopener">Official rules <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </div>
@@ -315,23 +320,24 @@
         <div class="prizes">
           <article class="panel prize reveal">
             <span class="prize__pos">P1</span>
-            <h3>1st place</h3>
+            <h3>1st Prize</h3>
             <p class="prize__cat">Both tracks</p>
-            <p>A prize for the winner of each track.</p>
+            <p>Gadgets and promotional items for the winners of each track.</p>
           </article>
           <article class="panel prize reveal">
-            <span class="prize__pos">P2</span>
-            <h3>2nd place</h3>
+            <span class="prize__pos">HM</span>
+            <h3>Honourable Mention</h3>
             <p class="prize__cat">Both tracks</p>
-            <p>A prize for the runner-up of each track.</p>
+            <p>Promotional items for the second-placed team of each track.</p>
           </article>
           <article class="panel panel--dark prize prize--note reveal">
             <div class="pixels" data-blocks="14" aria-hidden="true"></div>
-            <span class="prize__pos">2+</span>
-            <h3>Mentors / topic</h3>
-            <p>At least 2 mentors per topic give teams constant support for the whole hackathon.</p>
+            <span class="prize__pos">M</span>
+            <h3>Mentors</h3>
+            <p>Mentors support the teams for the whole hackathon.</p>
           </article>
         </div>
+        <p class="prizes__note reveal">The total estimated value of the prizes is €4,000. Prizes are handed over in person to the winners at the ceremony on 22 November.</p>
       </div>
     </section>
 
@@ -347,18 +353,21 @@
           <div class="info">
             <article class="panel info__card reveal">
               <span class="info__k">Who can join</span>
-              <p><strong>3rd and 4th year students, and Master's students.</strong> If you're in your third or fourth year of university, or doing a Master's degree, and you like building software, this race is for you.</p>
+              <p><strong>UTCN and UBB students in their 3rd or 4th year, and Master's students.</strong> If you're 18 or older and you like building software, this race is for you. Teams can mix students from different universities and years of study.</p>
             </article>
             <article class="panel info__card reveal">
               <span class="info__k">Selection</span>
-              <p>Selection is <strong>team based</strong>. Each team has <strong>4 participants</strong>, and <strong>all of them must submit their CVs</strong>, along with a survey form.</p>
+              <p>Selection is <strong>team based</strong>. Each team has <strong>4 participants</strong>, and <strong>every member fills in the form individually</strong>, with the same team name and track, and uploads an up-to-date CV. Selected teams confirm their participation by <strong>17 November, 16:00</strong>.</p>
             </article>
             <article class="panel info__card info__card--status reveal">
               <div>
                 <span class="info__k">Registration form</span>
-                <p>The form and QR code will be available when registration opens on <strong>19 October</strong>.</p>
+                <p data-reg-pre>The form will be available when registration opens on <strong>19 October at 10:00</strong>.</p>
+                <div class="btn-row" data-reg-live hidden>
+                  <a class="btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DoaWPYi1_ECNr-34g5bKMcgYgLGl61NFqOv4difc-DlUNkxDUDBWRkdVNU8zSUoxWFZHWTFJQ1lXTy4u" target="_blank" rel="noopener">Fill in the form <span aria-hidden="true">↗</span></a>
+                </div>
+                <p data-reg-live hidden>Registration is open until <strong>1 November, 23:59</strong>.</p>
               </div>
-              <div class="qr" aria-hidden="true"><span>QR</span><small>from 19.10</small></div>
             </article>
           </div>
 
@@ -369,9 +378,11 @@
             </div>
             <ol class="keydates__list">
               <li><time datetime="2026-10-05">5 Oct</time><span>Event promotion begins</span></li>
-              <li><time datetime="2026-10-19">19 Oct</time><span>Registration opens</span></li>
-              <li><time datetime="2026-11-02">2 Nov</time><span>Registration closes. Participant selection begins</span></li>
-              <li><time datetime="2026-11-13">13 Nov</time><span>Final participant list and teams announced</span></li>
+              <li><time datetime="2026-10-19">19 Oct</time><span>Registration opens (10:00)</span></li>
+              <li><time datetime="2026-11-01">1 Nov</time><span>Registration closes (23:59)</span></li>
+              <li><time datetime="2026-11-02">2 Nov</time><span>Participant selection begins (until 12 Nov)</span></li>
+              <li><time datetime="2026-11-13">13 Nov</time><span>Selected teams announced</span></li>
+              <li><time datetime="2026-11-17">17 Nov</time><span>Participation confirmation deadline (16:00)</span></li>
               <li class="is-race"><time datetime="2026-11-20">20 Nov</time><span>Lights out!</span></li>
             </ol>
           </div>
@@ -388,7 +399,48 @@
             <h2 class="h2 h2--sm">Competition <em>rules.</em></h2>
             <p>Code of conduct, equipment care, fair play and judging criteria: all official CodeLap Hackathon 2026 rules are available in the full document.</p>
           </div>
-          <a class="btn" href="https://claude.ai/artifact/U6guMbbbthUHRPtGp7rjGZ" target="_blank" rel="noopener">Read the full rules <span aria-hidden="true">↗</span></a>
+          <a class="btn" href="../assets/regulament.pdf" target="_blank" rel="noopener">Read the full rules <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── FAQ ─────────── -->
+    <section class="section" id="faq">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="label">08. FAQ</span>
+          <h2 class="h2">Frequently<br /><em>asked questions.</em></h2>
+        </header>
+
+        <div class="faq">
+          <div class="faq__group reveal">
+            <h3 class="faq__cat">Eligibility</h3>
+            <details class="faq__item"><summary>Who can participate?</summary><p>CodeLap is open to UTCN and UBB students in their 3rd or 4th year of study, as well as those enrolled in Master's programmes.</p></details>
+            <details class="faq__item"><summary>What are the selection criteria?</summary><p>Selection is made by a committee of Porsche Engineering Romania representatives, based on the information in the registration form and the participants' CVs. Motivation, experience, relevant skills and how well the team fits the chosen track are evaluated. Selection is made at team level.</p></details>
+            <details class="faq__item"><summary>Can we form a team with students from different universities or years of study?</summary><p>Yes. Teams can include students from different universities and/or years of study, as long as all 4 members meet the eligibility criteria.</p></details>
+          </div>
+
+          <div class="faq__group reveal">
+            <h3 class="faq__cat">Schedule &amp; logistics</h3>
+            <details class="faq__item"><summary>When does registration start?</summary><p>Registration runs from 19.10.2026 at 10:00 until 01.11.2026 at 23:59 (Romanian time).</p></details>
+            <details class="faq__item"><summary>Do I have to be on site for the whole hackathon?</summary><p>Participants must be on site during the times set out in the official schedule. After 22:00, activity continues online and teams can work remotely.</p></details>
+            <details class="faq__item"><summary>What should I bring?</summary><p>Bring your own laptop with a working webcam, plus any other equipment you think you'll need. We provide the workspace, a monitor for each team, internet access, meals, drinks and snacks.</p></details>
+          </div>
+
+          <div class="faq__group reveal">
+            <h3 class="faq__cat">Teams &amp; participation</h3>
+            <details class="faq__item"><summary>Can I take part if I don't have a team?</summary><p>No. To register you need a complete team of 4, formed before the deadline. Each member registers individually, using the same team name and the same track.</p></details>
+            <details class="faq__item"><summary>What happens if a team member withdraws?</summary><p>If a member can no longer take part, the team must inform the Organizers as soon as possible. The team can propose a replacement, who must be validated by the Organizers.</p></details>
+          </div>
+
+          <div class="faq__group reveal">
+            <h3 class="faq__cat">Competition</h3>
+            <details class="faq__item"><summary>Can we start the project before the hackathon?</summary><p>No. The challenge is announced at the start of the hackathon, and the competition solution must be developed exclusively during the hackathon.</p></details>
+            <details class="faq__item"><summary>Can we use existing libraries, frameworks, APIs or other resources?</summary><p>Yes. Documentation, libraries, frameworks, APIs and other external resources may be used, in compliance with copyright and the applicable licences. At the request of the Organizers or the jury, the team must be able to list the resources it used.</p></details>
+            <details class="faq__item"><summary>How is the winning team decided?</summary><p>Every project is evaluated against the same criteria: technical execution, presentation and demo, innovation and creativity, and relevance and impact. The team with the highest score in each track wins the 1st Prize.</p></details>
+          </div>
+
+          <p class="faq__more reveal"><strong>Didn't find your answer?</strong> You'll find more details in the <a href="../assets/regulament.pdf" target="_blank" rel="noopener">rules</a>, or you can contact us at <a href="mailto:gdgoncampustucn@gmail.com">gdgoncampustucn@gmail.com</a> or <a href="mailto:hackathon@porsche-engineering.ro">hackathon@porsche-engineering.ro</a>.</p>
         </div>
       </div>
     </section>
@@ -418,6 +470,10 @@
     </div>
   </footer>
 
+<<<<<<< HEAD:supersecret/eng/index.html
   <script src="/main.js?v=5" defer></script>
+=======
+  <script src="../main.js?v=5" defer></script>
+>>>>>>> b1991ce (added regulation and faq):eng/index.html
 </body>
 </html>

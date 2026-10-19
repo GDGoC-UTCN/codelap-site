@@ -7,7 +7,11 @@
 (() => {
   "use strict";
 
+<<<<<<< HEAD
   const REVEAL_AT = new Date("2026-10-26T20:00:00+02:00"); // 26 Oct, 20:00 Romania time (EET, after the clocks go back)
+=======
+  const REVEAL_AT = new Date("2026-10-19T10:00:00+03:00"); // Cluj-Napoca time
+>>>>>>> b1991ce (added regulation and faq)
   const TEASER_START = new Date("2026-09-26T00:00:00+03:00"); // loading bar starts here
 
   const demoSecs = parseInt(document.body.dataset.demo, 10) || 0;

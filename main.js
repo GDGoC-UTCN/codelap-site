@@ -8,15 +8,15 @@
   const EVENT_START = new Date("2026-11-20T10:00:00+02:00");
   const EVENT_END = new Date("2026-11-22T18:00:00+02:00");
   const PROMO_START = new Date("2026-10-05T00:00:00+03:00"); // progress bar starts here
-  const REG_OPEN = new Date("2026-10-19T00:00:00+03:00");
-  const REG_CLOSE = new Date("2026-11-03T00:00:00+02:00"); // end of 2 Nov
+  const REG_OPEN = new Date("2026-10-19T10:00:00+03:00");
+  const REG_CLOSE = new Date("2026-11-02T00:00:00+02:00"); // end of 1 Nov (23:59)
   const TEAMS_OUT = new Date("2026-11-13T00:00:00+02:00");
 
   const LANG = document.documentElement.lang === "ro" ? "ro" : "en";
   const T = {
     en: {
-      soon: "Warm-up / Registration opens 19 Oct",
-      open: "Registration open / until 2 Nov",
+      soon: "Warm-up / Registration opens 19 Oct, 10:00",
+      open: "Registration open / until 1 Nov",
       selection: "Selection in progress / teams on 13 Nov",
       teams: "Teams announced / final warm-up",
       live: "Race is on. Hacking until",
@@ -26,8 +26,8 @@
       closeMenu: "Close menu",
     },
     ro: {
-      soon: "Încălzire / Înscrierile se deschid pe 19 oct",
-      open: "Înscrieri deschise / până pe 2 nov",
+      soon: "Încălzire / Înscrierile se deschid pe 19 oct, ora 10:00",
+      open: "Înscrieri deschise / până pe 1 nov",
       selection: "Selecție în desfășurare / echipele pe 13 nov",
       teams: "Echipele au fost anunțate / ultima încălzire",
       live: "Cursa a început. Mai sunt",
@@ -266,6 +266,15 @@
   }
   tickCountdown();
   setInterval(tickCountdown, 1000);
+
+  // Show the registration form link once registration opens.
+  function updateRegForm() {
+    const open = new Date() >= REG_OPEN;
+    document.querySelectorAll("[data-reg-pre]").forEach((el) => (el.hidden = open));
+    document.querySelectorAll("[data-reg-live]").forEach((el) => (el.hidden = !open));
+  }
+  updateRegForm();
+  setInterval(updateRegForm, 30000);
 
   // Mark key dates that have already passed.
   document.querySelectorAll(".keydates__list time[datetime]").forEach((t) => {
