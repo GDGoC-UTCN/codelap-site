@@ -1020,19 +1020,20 @@ p + p { margin-top: 12px; }
 /* organisers */
 .orgs {
   display: grid;
-  grid-template-columns: auto 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: stretch;
   gap: 16px;
   margin-top: 16px;
 }
-.orgs__label { align-self: center; padding-right: 8px; }
 .org {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
 }
-.org .wordmark { flex-shrink: 0; font-size: 13px; }
-.org .wordmark--gdg svg { width: 44px; height: 32px; }
+.logo-img { display: block; height: auto; max-width: 100%; }
+.org .logo-img--pe { width: 190px; }
+.org .logo-img--gdg { width: 230px; }
 .org__name {
   font-family: var(--f-display);
   font-weight: 800;
@@ -1232,6 +1233,9 @@ p + p { margin-top: 12px; }
 }
 .partners { display: flex; align-items: center; gap: 22px; }
 .partners__sep { width: 1.5px; height: 40px; background: var(--ink); }
+.partners .logo-img--pe { width: 170px; }
+.partners .logo-img--gdg { width: 210px; }
+/* legacy text wordmark */
 .wordmark {
   font-family: var(--f-display);
   font-weight: 800;
@@ -1279,7 +1283,6 @@ p + p { margin-top: 12px; }
   .tracks { grid-template-columns: repeat(2, 1fr); }
   .about, .location, .join { grid-template-columns: 1fr; }
   .orgs { grid-template-columns: 1fr 1fr; }
-  .orgs__label { grid-column: 1 / -1; }
   .prizes { grid-template-columns: 1fr 1fr; }
   .prize--note { grid-column: 1 / -1; min-height: 0; }
 }
@@ -1328,7 +1331,6 @@ p + p { margin-top: 12px; }
   .track h3 { margin-top: 20px; }
   .info { grid-template-columns: 1fr; }
   .orgs, .prizes, .tracks--two { grid-template-columns: 1fr; }
-  .org { flex-direction: column; align-items: flex-start; gap: 14px; }
   .prize { min-height: 0; }
   .about__stats { gap: 12px; }
   .stat { min-height: 130px; }
@@ -1340,7 +1342,9 @@ p + p { margin-top: 12px; }
   .map__pin span { font-size: 10px; }
   .hero__ctas .btn { flex: 1 1 100%; }
   .partners { gap: 14px; }
-  .wordmark--pe, .wordmark--gdg { font-size: 14px; }
+  .partners { flex-wrap: wrap; }
+  .partners .logo-img--pe { width: 140px; }
+  .partners .logo-img--gdg { width: 170px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
