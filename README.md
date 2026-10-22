@@ -12,7 +12,7 @@ When you change content, edit **both** `ro/index.html` and `eng/index.html`.
 Run locally:
 
 ```sh
-python3 -m http.server 8000   # then open http://localhost:8000/ro/
+npm run dev   # then open http://localhost:8000/ro/
 ```
 
 Deploy:

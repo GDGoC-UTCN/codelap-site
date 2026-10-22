@@ -1,0 +1,8 @@
+{
+  "name": "codelap-site",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Open http://localhost:8000/ro/ or http://localhost:8000/eng/' && python3 -m http.server 8000",
+    "deploy": "firebase deploy --only hosting"
+  }
+}
