@@ -834,7 +834,30 @@ p + p { margin-top: 12px; }
   color: var(--accent);
   margin: 12px 0 8px !important;
 }
-.lap p:last-child { font-size: 15px; }
+.agenda {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+.agenda li {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 1.35;
+}
+.agenda time {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  line-height: 1.75;
+  letter-spacing: .04em;
+  color: var(--lap);
+  white-space: nowrap;
+}
+.agenda .is-online { color: var(--muted); }
 .note { margin-top: 32px; }
 
 /* quote band */

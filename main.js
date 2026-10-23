@@ -5,8 +5,8 @@
   document.documentElement.classList.add("js");
 
   // All times are Cluj-Napoca local time.
-  const EVENT_START = new Date("2026-11-20T10:00:00+02:00");
-  const EVENT_END = new Date("2026-11-22T18:00:00+02:00");
+  const EVENT_START = new Date("2026-11-20T16:00:00+02:00");
+  const EVENT_END = new Date("2026-11-22T18:30:00+02:00");
   const PROMO_START = new Date("2026-10-05T00:00:00+03:00"); // progress bar starts here
   const REG_OPEN = new Date("2026-10-19T10:00:00+03:00");
   const REG_CLOSE = new Date("2026-11-02T00:00:00+02:00"); // end of 1 Nov (23:59)

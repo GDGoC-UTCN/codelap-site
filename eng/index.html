@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=8" />
+  <link rel="stylesheet" href="../styles.css?v=9" />
 </head>
 <body>
   <canvas id="glitch-bg" aria-hidden="true"></canvas>
@@ -208,9 +208,19 @@
               <span class="lap__n">01</span>
               <span class="lap__node" aria-hidden="true"></span>
               <svg class="lap__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg>
-              <h3>Opening &amp; technical sessions</h3>
+              <h3>Opening &amp; workshops</h3>
               <p class="lap__day">Friday · 20 Nov</p>
-              <p>Check-in between 16:00 and 17:00, then the official opening and the presentation of the challenges. One technical session per track follows. After 22:00, work continues online.</p>
+              <ul class="agenda">
+                <li><time>16:00</time><span>Start of the day (enter the building)</span></li>
+                <li><time>16:00–16:45</time><span>Registration + team check-in</span></li>
+                <li><time>16:30–17:00</time><span>Networking</span></li>
+                <li><time>17:00–18:00</time><span>Health &amp; safety + opening ceremony</span></li>
+                <li><time>18:00–19:00</time><span>Workshops (both tracks in parallel)</span></li>
+                <li><time>19:00–20:00</time><span>Dinner break</span></li>
+                <li><time>20:00–21:45</time><span>Initial brainstorming + coding session</span></li>
+                <li><time>22:00</time><span>End of the day (exit the building)</span></li>
+                <li class="is-online"><time>22:00–00:00</time><span>Online coding session</span></li>
+              </ul>
             </li>
             <li class="lap">
               <span class="lap__n">02</span>
@@ -218,21 +228,42 @@
               <svg class="lap__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
               <h3>Build day</h3>
               <p class="lap__day">Saturday · 21 Nov</p>
-              <p>08:00–22:00: project development and mentoring sessions, with breaks. After 22:00, work continues online.</p>
+              <ul class="agenda">
+                <li class="is-online"><time>00:00–08:00</time><span>Online coding session</span></li>
+                <li><time>08:00</time><span>Start of the day (enter the building)</span></li>
+                <li><time>08:00–12:00</time><span>Coding session</span></li>
+                <li><time>12:00–12:30</time><span>Lunch break</span></li>
+                <li><time>12:30–18:00</time><span>Coding session</span></li>
+                <li><time>18:00–18:30</time><span>Dinner break</span></li>
+                <li><time>18:30–21:45</time><span>Coding session</span></li>
+                <li><time>22:00</time><span>End of the day (exit the building)</span></li>
+                <li class="is-online"><time>22:00–00:00</time><span>Online coding session</span></li>
+              </ul>
             </li>
             <li class="lap">
               <span class="lap__n">03</span>
               <span class="lap__node" aria-hidden="true"></span>
               <svg class="lap__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M12 16v4M8 21h8M11 7l-2 4h4l-2 3"/></svg>
-              <h3>Submission &amp; final presentations</h3>
+              <h3>Finals &amp; awards</h3>
               <p class="lap__day">Sunday · 22 Nov</p>
-              <p>Projects are submitted by 12:00. From 12:30, each team gets up to 15 minutes: 10 to present and demo, 5 for the jury's questions. The awards ceremony is at 16:30.</p>
+              <ul class="agenda">
+                <li class="is-online"><time>00:00–08:00</time><span>Online coding session</span></li>
+                <li><time>08:00</time><span>Start of the day (enter the building)</span></li>
+                <li><time>08:00–11:30</time><span>Final coding session</span></li>
+                <li><time>11:30–12:00</time><span>Lunch break</span></li>
+                <li><time>12:00</time><span>Code submission deadline</span></li>
+                <li><time>12:00–12:30</time><span>Final check-up + presentation prep</span></li>
+                <li><time>12:30–16:00</time><span>Project presentations + live demos</span></li>
+                <li><time>16:00–16:30</time><span>Jury deliberation</span></li>
+                <li><time>16:30–17:00</time><span>Prize ceremony + final speech</span></li>
+                <li><time>17:00–18:30</time><span>Networking session</span></li>
+                <li><time>18:30</time><span>End of the day (exit the building)</span></li>
+              </ul>
             </li>
           </ol>
 
           <div class="btn-row">
-            <a class="btn" href="https://docs.google.com/document/d/1RqpgbeSEgyTqQ353kEy7WQGCFNHvMf1YsGv8Kuz95RY/edit?tab=t.0#heading=h.voz0mu7q1jo9" target="_blank" rel="noopener">See the full schedule <span aria-hidden="true">↗</span></a>
-            <a class="btn btn--ghost" href="../assets/regulament.pdf" target="_blank" rel="noopener">Official rules <span aria-hidden="true">↗</span></a>
+            <a class="btn" href="../assets/regulament.pdf" target="_blank" rel="noopener">Official rules <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </div>
@@ -455,6 +486,6 @@
     </div>
   </footer>
 
-  <script src="../main.js?v=5" defer></script>
+  <script src="../main.js?v=6" defer></script>
 </body>
 </html>

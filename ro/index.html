@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=8" />
+  <link rel="stylesheet" href="../styles.css?v=9" />
 </head>
 <body>
   <canvas id="glitch-bg" aria-hidden="true"></canvas>
@@ -208,9 +208,19 @@
               <span class="lap__n">01</span>
               <span class="lap__node" aria-hidden="true"></span>
               <svg class="lap__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg>
-              <h3>Deschidere &amp; sesiuni tehnice</h3>
+              <h3>Deschidere &amp; workshopuri</h3>
               <p class="lap__day">Vineri · 20 nov</p>
-              <p>Check-in între 16:00 și 17:00, apoi deschiderea oficială și prezentarea challenge-urilor. Urmează câte o sesiune tehnică pentru fiecare traseu. După 22:00, lucrul continuă online.</p>
+              <ul class="agenda">
+                <li><time>16:00</time><span>Începutul zilei (intrarea în clădire)</span></li>
+                <li><time>16:00–16:45</time><span>Înregistrare + check-in echipe</span></li>
+                <li><time>16:30–17:00</time><span>Networking</span></li>
+                <li><time>17:00–18:00</time><span>Instructaj SSM + ceremonia de deschidere</span></li>
+                <li><time>18:00–19:00</time><span>Workshopuri (ambele trasee, în paralel)</span></li>
+                <li><time>19:00–20:00</time><span>Pauză de cină</span></li>
+                <li><time>20:00–21:45</time><span>Brainstorming inițial + sesiune de coding</span></li>
+                <li><time>22:00</time><span>Sfârșitul zilei (ieșirea din clădire)</span></li>
+                <li class="is-online"><time>22:00–00:00</time><span>Sesiune de coding online</span></li>
+              </ul>
             </li>
             <li class="lap">
               <span class="lap__n">02</span>
@@ -218,21 +228,42 @@
               <svg class="lap__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
               <h3>Zi de dezvoltare</h3>
               <p class="lap__day">Sâmbătă · 21 nov</p>
-              <p>08:00–22:00: dezvoltarea proiectelor și sesiuni de mentorat, cu pauzele aferente. După 22:00, lucrul continuă online.</p>
+              <ul class="agenda">
+                <li class="is-online"><time>00:00–08:00</time><span>Sesiune de coding online</span></li>
+                <li><time>08:00</time><span>Începutul zilei (intrarea în clădire)</span></li>
+                <li><time>08:00–12:00</time><span>Sesiune de coding</span></li>
+                <li><time>12:00–12:30</time><span>Pauză de prânz</span></li>
+                <li><time>12:30–18:00</time><span>Sesiune de coding</span></li>
+                <li><time>18:00–18:30</time><span>Pauză de cină</span></li>
+                <li><time>18:30–21:45</time><span>Sesiune de coding</span></li>
+                <li><time>22:00</time><span>Sfârșitul zilei (ieșirea din clădire)</span></li>
+                <li class="is-online"><time>22:00–00:00</time><span>Sesiune de coding online</span></li>
+              </ul>
             </li>
             <li class="lap">
               <span class="lap__n">03</span>
               <span class="lap__node" aria-hidden="true"></span>
               <svg class="lap__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M12 16v4M8 21h8M11 7l-2 4h4l-2 3"/></svg>
-              <h3>Predare &amp; prezentări finale</h3>
+              <h3>Finala &amp; premierea</h3>
               <p class="lap__day">Duminică · 22 nov</p>
-              <p>Proiectele se predau până la 12:00. Din 12:30, fiecare echipă are maximum 15 minute: 10 pentru prezentare și demonstrație, 5 pentru întrebările juriului. Premierea are loc la 16:30.</p>
+              <ul class="agenda">
+                <li class="is-online"><time>00:00–08:00</time><span>Sesiune de coding online</span></li>
+                <li><time>08:00</time><span>Începutul zilei (intrarea în clădire)</span></li>
+                <li><time>08:00–11:30</time><span>Sesiune finală de coding</span></li>
+                <li><time>11:30–12:00</time><span>Pauză de prânz</span></li>
+                <li><time>12:00</time><span>Termen-limită pentru predarea codului</span></li>
+                <li><time>12:00–12:30</time><span>Verificare finală + pregătirea prezentării</span></li>
+                <li><time>12:30–16:00</time><span>Prezentarea proiectelor + demo-uri live</span></li>
+                <li><time>16:00–16:30</time><span>Deliberarea juriului</span></li>
+                <li><time>16:30–17:00</time><span>Ceremonia de premiere + discursul final</span></li>
+                <li><time>17:00–18:30</time><span>Sesiune de networking</span></li>
+                <li><time>18:30</time><span>Sfârșitul zilei (ieșirea din clădire)</span></li>
+              </ul>
             </li>
           </ol>
 
           <div class="btn-row">
-            <a class="btn" href="https://docs.google.com/document/d/1RqpgbeSEgyTqQ353kEy7WQGCFNHvMf1YsGv8Kuz95RY/edit?tab=t.0#heading=h.voz0mu7q1jo9" target="_blank" rel="noopener">Vezi desfășurătorul complet <span aria-hidden="true">↗</span></a>
-            <a class="btn btn--ghost" href="../assets/regulament.pdf" target="_blank" rel="noopener">Regulament oficial <span aria-hidden="true">↗</span></a>
+            <a class="btn" href="../assets/regulament.pdf" target="_blank" rel="noopener">Regulament oficial <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </div>
@@ -455,6 +486,6 @@
     </div>
   </footer>
 
-  <script src="../main.js?v=5" defer></script>
+  <script src="../main.js?v=6" defer></script>
 </body>
 </html>
