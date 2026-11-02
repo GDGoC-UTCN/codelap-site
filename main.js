@@ -267,22 +267,6 @@
   tickCountdown();
   setInterval(tickCountdown, 1000);
 
-  // Show the registration form link once registration opens.
-  function updateRegForm() {
-    const open = new Date() >= REG_OPEN;
-    document.querySelectorAll("[data-reg-pre]").forEach((el) => (el.hidden = open));
-    document.querySelectorAll("[data-reg-live]").forEach((el) => (el.hidden = !open));
-  }
-  updateRegForm();
-  setInterval(updateRegForm, 30000);
-
-  // Mark key dates that have already passed.
-  document.querySelectorAll(".keydates__list time[datetime]").forEach((t) => {
-    if (new Date(`${t.getAttribute("datetime")}T00:00:00+02:00`) <= new Date()) {
-      t.closest("li").classList.add("is-past");
-    }
-  });
-
   /* ─────────── Nav ─────────── */
   const nav = document.getElementById("nav");
   const toggle = document.getElementById("nav-toggle");
