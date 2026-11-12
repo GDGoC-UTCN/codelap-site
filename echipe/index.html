@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=11" />
+  <link rel="stylesheet" href="../styles.css?v=8" />
 </head>
 <body class="page-teams">
   <canvas id="glitch-bg" aria-hidden="true"></canvas>
@@ -22,8 +22,7 @@
   <header class="nav" id="nav">
     <div class="container nav__inner">
       <a href="https://codelap-hackathon.web.app/ro/" class="logo" aria-label="CodeLap Hackathon — site-ul principal">
-        <span class="logo__word">Code<b>Lap</b><s>/</s></span>
-        <span class="logo__sub">Hackathon</span>
+        <img class="logo-img logo-img--cl" src="../assets/codelap-wordmark-black.svg" alt="CodeLap Hackathon" width="268" height="92" />
       </a>
       <nav class="nav__links" id="nav-links" aria-label="Booklet">
         <a href="#inainte">Înainte</a>
@@ -165,9 +164,15 @@
               <h3>Check-in &amp; deschidere</h3>
               <p class="lap__day">Vineri · 20 nov</p>
               <ul class="agenda">
-                <li><time>16:00–16:45</time><span><b>Check-in:</b> prezentați actul de identitate, semnați primirea cartelei de acces și primiți ecusonul.</span></li>
-                <li><time>17:00</time><span><b>Health &amp; Safety și deschiderea oficială.</b> Vă rugăm să ajungeți din timp.</span></li>
-                <li><time>18:00–19:00</time><span><b>Workshop tehnic</b>, separat pe fiecare direcție (vezi sălile mai jos).</span></li>
+                <li><time>16:00</time><span>Începutul zilei (intrarea în clădire)</span></li>
+                <li><time>16:00–16:45</time><span>Înregistrare + check-in echipe</span></li>
+                <li><time>16:30–17:00</time><span>Networking</span></li>
+                <li><time>17:00–18:00</time><span>Instructaj SSM + ceremonia de deschidere</span></li>
+                <li><time>18:00–19:00</time><span>Workshopuri (ambele trasee, în paralel)</span></li>
+                <li><time>19:00–20:00</time><span>Pauză de cină</span></li>
+                <li><time>20:00–21:45</time><span>Brainstorming inițial + sesiune de coding</span></li>
+                <li><time>22:00</time><span>Sfârșitul zilei (ieșirea din clădire)</span></li>
+                <li class="is-online"><time>22:00–00:00</time><span>Sesiune de coding online</span></li>
               </ul>
             </li>
             <li class="lap">
@@ -177,8 +182,15 @@
               <h3>Coding session</h3>
               <p class="lap__day">Sâmbătă · 21 nov</p>
               <ul class="agenda">
-                <li><time>până la 21:45</time><span>Lucrați la sediu.</span></li>
-                <li class="is-online"><time>după 21:45</time><span>Continuați online.</span></li>
+                <li class="is-online"><time>00:00–08:00</time><span>Sesiune de coding online</span></li>
+                <li><time>08:00</time><span>Începutul zilei (intrarea în clădire)</span></li>
+                <li><time>08:00–12:00</time><span>Sesiune de coding</span></li>
+                <li><time>12:00–12:30</time><span>Pauză de prânz</span></li>
+                <li><time>12:30–18:00</time><span>Sesiune de coding</span></li>
+                <li><time>18:00–18:30</time><span>Pauză de cină</span></li>
+                <li><time>18:30–21:45</time><span>Sesiune de coding</span></li>
+                <li><time>22:00</time><span>Sfârșitul zilei (ieșirea din clădire)</span></li>
+                <li class="is-online"><time>22:00–00:00</time><span>Sesiune de coding online</span></li>
               </ul>
             </li>
             <li class="lap">
@@ -188,8 +200,17 @@
               <h3>Finala</h3>
               <p class="lap__day">Duminică · 22 nov</p>
               <ul class="agenda">
-                <li><time>12:00</time><span><b>Termen-limită predare.</b> Urmează prezentările și demo-urile live, jurizarea și premierea.</span></li>
-                <li><time>până la 15:30</time><span><b>Restituiți cartela de acces.</b></span></li>
+                <li class="is-online"><time>00:00–08:00</time><span>Sesiune de coding online</span></li>
+                <li><time>08:00</time><span>Începutul zilei (intrarea în clădire)</span></li>
+                <li><time>08:00–11:30</time><span>Sesiune finală de coding</span></li>
+                <li><time>11:30–12:00</time><span>Pauză de prânz</span></li>
+                <li><time>12:00</time><span>Termen-limită pentru predarea codului</span></li>
+                <li><time>12:00–12:30</time><span>Verificare finală + pregătirea prezentării</span></li>
+                <li><time>12:30–15:00</time><span>Prezentarea proiectelor + demo-uri live</span></li>
+                <li><time>15:00–15:30</time><span>Deliberarea juriului</span></li>
+                <li><time>15:30–16:00</time><span>Ceremonia de premiere + discursul final</span></li>
+                <li><time>16:00–17:30</time><span>Sesiune de networking</span></li>
+                <li><time>17:30</time><span>Sfârșitul zilei (ieșirea din clădire)</span></li>
               </ul>
             </li>
           </ol>
@@ -305,13 +326,12 @@
     <div class="container">
       <div class="footer__top">
         <div class="partners">
-          <img class="logo-img logo-img--pe" src="../assets/logo-porsche-engineering.png" alt="Porsche Engineering" width="263" height="39" />
+          <img class="logo-img logo-img--pe" src="../assets/logo-porsche-engineering-transparent.png" alt="Porsche Engineering" width="263" height="39" />
           <span class="partners__sep" aria-hidden="true"></span>
-          <img class="logo-img logo-img--gdg" src="../assets/logo-gdg-utcn.jpg" alt="Google Developer Group, Technical University of Cluj-Napoca" width="889" height="183" />
+          <img class="logo-img logo-img--gdg" src="../assets/logo-gdg-utcn.png" alt="Google Developer Group, Technical University of Cluj-Napoca" width="1920" height="390" />
         </div>
         <a href="#top" class="logo logo--lg" aria-label="Înapoi sus">
-          <span class="logo__word">Code<b>Lap</b><s>/</s></span>
-          <span class="logo__sub">Hackathon</span>
+          <img class="logo-img logo-img--cl" src="../assets/codelap-wordmark-black.svg" alt="CodeLap Hackathon" width="268" height="92" />
         </a>
       </div>
       <div class="footer__bottom">

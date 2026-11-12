@@ -372,6 +372,9 @@ p + p { margin-top: 12px; }
 }
 .logo--lg .logo__word { font-size: clamp(34px, 5vw, 52px); }
 .logo--lg .logo__sub { font-size: 11px; margin-top: 6px; }
+.logo-img--cl { height: 46px; width: auto; max-width: none; }
+.title .logo-img--hero { width: clamp(260px, 36vw, 480px); max-width: 100%; }
+.logo--lg .logo-img--cl { height: clamp(56px, 7vw, 76px); }
 
 /* ─────────── hero ─────────── */
 
