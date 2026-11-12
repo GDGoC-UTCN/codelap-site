@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Echipe selectate — CodeLap Hackathon 2026</title>
+  <meta name="description" content="Booklet oficial pentru echipele selectate la CodeLap Hackathon 2026: ce faceți înainte, în timpul și după eveniment." />
+  <!-- Page for selected teams only: shared by link, kept out of search engines. -->
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0B306B" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B306B'/%3E%3Cpath d='M9 10l-5 6 5 6M23 10l5 6-5 6' stroke='%233A8BD9' stroke-width='3' fill='none'/%3E%3Crect x='12' y='14' width='8' height='4' fill='%23fff'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=11" />
+</head>
+<body class="page-teams">
+  <canvas id="glitch-bg" aria-hidden="true"></canvas>
+  <div class="viewport-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+  <!-- ─────────── NAV ─────────── -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="https://codelap-hackathon.web.app/ro/" class="logo" aria-label="CodeLap Hackathon — site-ul principal">
+        <span class="logo__word">Code<b>Lap</b><s>/</s></span>
+        <span class="logo__sub">Hackathon</span>
+      </a>
+      <nav class="nav__links" id="nav-links" aria-label="Booklet">
+        <a href="#inainte">Înainte</a>
+        <a href="#in-timpul">În timpul</a>
+        <a href="#dupa">După</a>
+        <a href="#reguli">Reguli</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ─────────── HERO ─────────── -->
+    <section class="hero" id="top">
+      <div class="container teams-hero">
+        <div class="hero__copy">
+          <p class="label label--lg reveal">// Echipe selectate · Booklet oficial</p>
+          <h1 class="title title--sm reveal">
+            <span class="title__smear" aria-hidden="true"></span>
+            <span class="glitch" data-text="Felicitări!">Felici<em>tări!</em></span>
+          </h1>
+          <p class="motto reveal">Sunteți la start<span class="blink">_</span></p>
+          <span class="dash reveal"></span>
+
+          <p class="hero__lead reveal">Ați fost selectați să participați la <b>CodeLap Hackathon 2026</b>. Mai jos găsiți tot ce trebuie să știți înainte, în timpul și după eveniment.</p>
+
+          <ul class="meta reveal">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1.5"/><path d="M3 10h18M8 3v4M16 3v4"/><rect x="7" y="13" width="3" height="3" class="fill"/></svg>
+              <span>20 – 22 noiembrie 2026</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22z" class="fill"/><circle cx="12" cy="9.5" r="2.6" fill="#fff" stroke="none"/></svg>
+              <span>Complexul Vivido, Str. Alexandru Vaida Voevod 16</span>
+            </li>
+          </ul>
+
+          <div class="hero__ctas reveal">
+            <a href="#inainte" class="btn">Ce aveți de făcut<span aria-hidden="true">↓</span></a>
+            <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47490c3a80520997:0xf40bb039506a9499?sa=X&amp;ved=1t:8290&amp;ictx=111" target="_blank" rel="noopener" class="btn btn--ghost">Google Maps<span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <aside class="panel panel--dark brief reveal" aria-label="Pe scurt">
+          <div class="pixels" data-blocks="30" aria-hidden="true"></div>
+          <div class="panel__head">
+            <span class="label label--light">Fișa cursei</span>
+            <span class="panel__tag">CodeLap<br />Hackathon</span>
+          </div>
+          <dl class="brief__list">
+            <div><dt>Check-in</dt><dd>Vineri · 16:00–16:45</dd></div>
+            <div><dt>Deschiderea oficială</dt><dd>Vineri · 17:00</dd></div>
+            <div><dt>Termen-limită predare</dt><dd>Duminică · 12:00</dd></div>
+            <div><dt>Returnare cartelă</dt><dd>Duminică · până la 15:30</dd></div>
+            <div><dt>Locație</dt><dd>Porsche Engineering Romania<br />Complexul Vivido, Cluj-Napoca</dd></div>
+          </dl>
+        </aside>
+      </div>
+
+      <!-- Countdown -->
+      <div class="container">
+        <div class="panel countdown reveal" id="countdown" aria-live="polite">
+          <div class="panel__head">
+            <span class="label">00. Countdown / Linia de start</span>
+            <span class="panel__tag">CodeLap<br />Hackathon</span>
+          </div>
+          <div class="countdown__body">
+            <div class="countdown__cells">
+              <div class="cd"><span class="cd__num" data-unit="days">--</span><span class="cd__lbl">Zile</span></div>
+              <div class="cd"><span class="cd__num" data-unit="hours">--</span><span class="cd__lbl">Ore</span></div>
+              <div class="cd"><span class="cd__num" data-unit="minutes">--</span><span class="cd__lbl">Minute</span></div>
+              <div class="cd"><span class="cd__num" data-unit="seconds">--</span><span class="cd__lbl">Secunde</span></div>
+            </div>
+            <div class="countdown__side">
+              <p class="countdown__status" id="cd-status">Startul în</p>
+              <p class="countdown__date">Vineri · 20.11.2026 · Check-in 16:00</p>
+              <div class="bar" aria-hidden="true"><span id="cd-bar"></span></div>
+              <p class="label label--muted" id="cd-pct">Se încarcă…</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── BEFORE ─────────── -->
+    <section class="section" id="inainte">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="label">01. Înainte de event</span>
+          <h2 class="h2">Pregătiți<br /><em>startul.</em></h2>
+        </header>
+
+        <div class="prep">
+          <article class="panel prep__item reveal">
+            <span class="track__idx">01</span>
+            <h3>Discord</h3>
+            <p>Alăturați-vă serverului Discord CodeLap Hackathon. Acolo primiți anunțurile și comunicați cu organizatorii.</p>
+            <a class="btn btn--sm" href="https://discord.com/invite/KX2HX4VZa7" target="_blank" rel="noopener">Intră pe Discord <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="panel prep__item reveal">
+            <span class="track__idx">02</span>
+            <h3>Check-in online</h3>
+            <p>Completați check-in-ul online prin formularul <b>Fill | Visitor Registration Form</b>, înainte de a veni la locație.</p>
+            <a class="btn btn--sm" href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DoaWPYi1_ECNr-34g5bKMcgYgLGl61NFqOv4difc-DlUMFA0MVA1NFJFRkpTUUc3M0tVV0NXRFE5Uy4u&amp;route=shorturl" target="_blank" rel="noopener">Formular check-in <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="panel prep__item reveal">
+            <span class="track__idx">03</span>
+            <h3>Ce aduceți</h3>
+            <ul class="ticks">
+              <li>Laptop și încărcător</li>
+              <li>Act de identitate valabil</li>
+              <li>Cameră web funcțională <small>(pentru direcția AI Drive)</small></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── DURING ─────────── -->
+    <section class="section" id="in-timpul">
+      <div class="container">
+        <div class="panel reveal">
+          <div class="panel__head">
+            <span class="label">02. În timpul eventului</span>
+            <span class="panel__tag">CodeLap<br />Hackathon</span>
+          </div>
+          <h2 class="h2 h2--sm">Momentele <em>cheie.</em></h2>
+
+          <p class="callout"><b>Prezență obligatorie:</b> toți membrii echipei, la locație, pe toată perioada evenimentului.</p>
+
+          <ol class="laps laps--three">
+            <li class="lap">
+              <span class="lap__n">01</span>
+              <span class="lap__node" aria-hidden="true"></span>
+              <svg class="lap__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1.5"/><circle cx="12" cy="10" r="3"/><path d="M7.5 18c.6-2.4 2.3-3.6 4.5-3.6s3.9 1.2 4.5 3.6"/></svg>
+              <h3>Check-in &amp; deschidere</h3>
+              <p class="lap__day">Vineri · 20 nov</p>
+              <ul class="agenda">
+                <li><time>16:00–16:45</time><span><b>Check-in:</b> prezentați actul de identitate, semnați primirea cartelei de acces și primiți ecusonul.</span></li>
+                <li><time>17:00</time><span><b>Health &amp; Safety și deschiderea oficială.</b> Vă rugăm să ajungeți din timp.</span></li>
+                <li><time>18:00–19:00</time><span><b>Workshop tehnic</b>, separat pe fiecare direcție (vezi sălile mai jos).</span></li>
+              </ul>
+            </li>
+            <li class="lap">
+              <span class="lap__n">02</span>
+              <span class="lap__node" aria-hidden="true"></span>
+              <svg class="lap__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+              <h3>Coding session</h3>
+              <p class="lap__day">Sâmbătă · 21 nov</p>
+              <ul class="agenda">
+                <li><time>până la 21:45</time><span>Lucrați la sediu.</span></li>
+                <li class="is-online"><time>după 21:45</time><span>Continuați online.</span></li>
+              </ul>
+            </li>
+            <li class="lap">
+              <span class="lap__n">03</span>
+              <span class="lap__node" aria-hidden="true"></span>
+              <svg class="lap__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4M5 4h12l-2 4 2 4H5"/></svg>
+              <h3>Finala</h3>
+              <p class="lap__day">Duminică · 22 nov</p>
+              <ul class="agenda">
+                <li><time>12:00</time><span><b>Termen-limită predare.</b> Urmează prezentările și demo-urile live, jurizarea și premierea.</span></li>
+                <li><time>până la 15:30</time><span><b>Restituiți cartela de acces.</b></span></li>
+              </ul>
+            </li>
+          </ol>
+
+          <div class="rooms">
+            <div class="room">
+              <span class="label">Workshop · AI Drive</span>
+              <p class="room__where">Etaj 9 <em>/ Miami Blue</em></p>
+            </div>
+            <div class="room">
+              <span class="label">Workshop · Data-Driven Infrastructure Engineering</span>
+              <p class="room__where">Etaj 10 <em>/ Heaven</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── AFTER ─────────── -->
+    <section class="section" id="dupa">
+      <div class="container">
+        <div class="panel rules reveal">
+          <div>
+            <span class="label">03. După event</span>
+            <h2 class="h2 h2--sm">Spuneți-ne <em>cum a fost.</em></h2>
+            <p>Completați formularul de feedback. Ne ajută să facem următoarea ediție și mai bună.</p>
+          </div>
+          <!-- TODO: link formular feedback -->
+          <a class="btn" href="#" target="_blank" rel="noopener">Formular feedback <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── CONDUCT ─────────── -->
+    <section class="section" id="reguli">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="label">04. Reguli de conduită</span>
+          <h2 class="h2">Pe <em>pistă.</em></h2>
+        </header>
+
+        <div class="conduct">
+          <article class="panel conduct__item reveal">
+            <h3>Fumat</h3>
+            <p>Permis doar în zonele exterioare desemnate (etajul 10, la parter), inclusiv țigările electronice / vape.</p>
+          </article>
+          <article class="panel conduct__item reveal">
+            <h3>Mâncare și băuturi</h3>
+            <p>Doar în zonele indicate de organizatori.</p>
+          </article>
+          <article class="panel conduct__item reveal">
+            <h3>Acces</h3>
+            <p>Doar la etajele 8, 9 și 10, cu ajutorul cartelei de acces.</p>
+          </article>
+          <article class="panel conduct__item reveal">
+            <h3>Cartele</h3>
+            <p>Personale și netransferabile, restituite duminică până la 15:30.</p>
+          </article>
+        </div>
+
+        <p class="prizes__note reveal">Pentru orice nelămurire legată de program, jurizare sau alte informații organizatorice, consultați din nou <a class="link" href="../assets/regulament.pdf" target="_blank" rel="noopener">Regulamentul Oficial CodeLap Hackathon 2026</a>.</p>
+      </div>
+    </section>
+
+    <!-- ─────────── CONTACT ─────────── -->
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="label">05. Contact</span>
+          <h2 class="h2">Pit <em>stop.</em></h2>
+        </header>
+
+        <div class="contacts">
+          <article class="panel contact reveal">
+            <span class="label">Întrebări generale</span>
+            <ul class="contact__list">
+              <li><a href="mailto:gdgoncampustucn@gmail.com">gdgoncampustucn@gmail.com</a></li>
+              <li><a href="mailto:hackathon@porsche-engineering.ro">hackathon@porsche-engineering.ro</a></li>
+            </ul>
+          </article>
+          <article class="panel panel--dark contact reveal">
+            <div class="pixels" data-blocks="16" aria-hidden="true"></div>
+            <span class="label label--light">Urgențe în cadrul evenimentului</span>
+            <ul class="contact__list">
+              <li><small>Contact principal</small>Ziman Daria<a href="tel:+40799911265">+40 799 911 265</a></li>
+              <li><small>Contact alternativ</small>Dragan Cristian<a href="tel:+40799911008">+40 799 911 008</a></li>
+            </ul>
+          </article>
+          <article class="panel contact reveal">
+            <span class="label">Organizatori</span>
+            <ul class="contact__list">
+              <li>Porsche Engineering Romania</li>
+              <li>Google Developers Group on Campus UTCN</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── BAND ─────────── -->
+    <section class="band" aria-label="Motto">
+      <div class="pixels" data-blocks="90" aria-hidden="true"></div>
+      <div class="container band__inner">
+        <p class="band__quote">Ne vedem la linia de start!</p>
+        <p class="band__motto glitch" data-text="THE RACE FOR INNOVATION.">The race for <em>innovation.</em></p>
+        <p class="label label--light">Cluj-Napoca / 20–22.11.2026</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─────────── FOOTER ─────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="partners">
+          <img class="logo-img logo-img--pe" src="../assets/logo-porsche-engineering.png" alt="Porsche Engineering" width="263" height="39" />
+          <span class="partners__sep" aria-hidden="true"></span>
+          <img class="logo-img logo-img--gdg" src="../assets/logo-gdg-utcn.jpg" alt="Google Developer Group, Technical University of Cluj-Napoca" width="889" height="183" />
+        </div>
+        <a href="#top" class="logo logo--lg" aria-label="Înapoi sus">
+          <span class="logo__word">Code<b>Lap</b><s>/</s></span>
+          <span class="logo__sub">Hackathon</span>
+        </a>
+      </div>
+      <div class="footer__bottom">
+        <span>CodeLap Hackathon 2026 / The race for innovation</span>
+        <span>Porsche Engineering Romania &amp; GDGoC UTCN</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js?v=7" defer></script>
+</body>
+</html>

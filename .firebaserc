@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "codelap-hackathon"
-  }
+  },
+  "targets": {
+    "codelap-hackathon": {
+      "hosting": {
+        "main": [
+          "codelap-hackathon"
+        ],
+        "teams": [
+          "codelap-teams"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

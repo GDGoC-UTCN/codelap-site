@@ -1,24 +1,62 @@
 {
-  "hosting": {
-    "public": ".",
-    "ignore": [
-      "firebase.json",
-      "README.md",
-      "package.json",
-      "**/.*",
-      ".venv/**",
-      "**/node_modules/**"
-    ],
-    "cleanUrls": true,
-    "headers": [
-      {
-        "source": "**",
-        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
-      },
-      {
-        "source": "**/*.@(jpg|jpeg|png|webp|svg)",
-        "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
-      }
-    ]
-  }
+  "hosting": [
+    {
+      "target": "main",
+      "public": ".",
+      "ignore": [
+        "firebase.json",
+        "README.md",
+        "package.json",
+        "**/.*",
+        "**/.*/**",
+        ".venv/**",
+        "**/node_modules/**",
+        "echipe/**"
+      ],
+      "cleanUrls": true,
+      "headers": [
+        {
+          "source": "**",
+          "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|png|webp|svg)",
+          "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+        }
+      ]
+    },
+    {
+      "target": "teams",
+      "public": ".",
+      "ignore": [
+        "firebase.json",
+        "README.md",
+        "package.json",
+        "**/.*",
+        "**/.*/**",
+        ".venv/**",
+        "**/node_modules/**",
+        "index.html",
+        "ro/**",
+        "eng/**"
+      ],
+      "cleanUrls": true,
+      "rewrites": [
+        { "source": "/", "destination": "/echipe/index.html" }
+      ],
+      "headers": [
+        {
+          "source": "**",
+          "headers": [
+            { "key": "Cache-Control", "value": "no-cache" },
+            { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|png|webp|svg)",
+          "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+        }
+      ]
+    }
+  ]
 }

@@ -3,6 +3,8 @@
   "private": true,
   "scripts": {
     "dev": "echo 'Open http://localhost:8000/ro/ or http://localhost:8000/eng/' && python3 -m http.server 8000",
-    "deploy": "firebase deploy --only hosting"
+    "deploy": "firebase deploy --only hosting",
+    "deploy:main": "firebase deploy --only hosting:main",
+    "deploy:teams": "firebase deploy --only hosting:teams"
   }
 }

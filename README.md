@@ -5,7 +5,9 @@ Static site (no build step), in two languages:
 - `ro/index.html` — Romanian, served at `/ro`
 - `eng/index.html` — English, served at `/eng`
 - `index.html` — redirects `/` to `/ro` for Romanian browsers, `/eng` for everyone else
-- `styles.css`, `main.js`, `assets/` — shared by both pages
+- `styles.css`, `main.js`, `assets/` — shared by all pages
+- `echipe/index.html` — handbook for the selected teams (Romanian only). Not part of the
+  public site: it is deployed as its own site at https://codelap-teams.web.app
 
 When you change content, edit **both** `ro/index.html` and `eng/index.html`.
 
@@ -18,8 +20,14 @@ npm run dev   # then open http://localhost:8000/ro/
 Deploy:
 
 ```sh
-firebase deploy --only hosting
+npm run deploy         # both sites
+npm run deploy:main    # public site only   (codelap-hackathon.web.app)
+npm run deploy:teams   # teams page only    (codelap-teams.web.app)
 ```
+
+Both sites are served from this repo (see the two `targets` in `firebase.json`).
+The main site skips `echipe/`; the teams site skips `index.html`, `ro/` and `eng/`
+and serves `echipe/index.html` at `/`.
 
 ## Dates
 
